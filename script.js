@@ -5,12 +5,12 @@ let vid;
 function preload() {
   img = loadImage('https://i.ibb.co/T1K5qvS/images-1.jpg');
   detector = ml5.objectDetector('cocossd');
-}
+};
 
 function gotDetections(error, results) {
   if (error) {
     console.error(error);
-  }
+  };
   console.log(results);
   for (let i = 0; i < results.length; i++) {
     let object = results[i];
